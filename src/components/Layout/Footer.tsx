@@ -9,7 +9,7 @@ export function Footer() {
           © {new Date().getFullYear()} {portfolio.brand.name}. All rights
           reserved.
         </p>
-        <p className="text-sm text-fg/60">Built with React + Tailwind.</p>
+        <p className="text-sm text-fg/60">Built with React + Tailwind !</p>
       </Container>
     </footer>
   )
