@@ -1,0 +1,32 @@
+@config '../tailwind.config.ts';
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-bg text-fg antialiased;
+  }
+
+  a {
+    @apply text-inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(270 95% 67% / 0.8);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: hsl(270 95% 60% / 0.35);
+  }
+}
+
