@@ -169,7 +169,10 @@ export const portfolio = {
     contactTitle: 'Let’s build your system.',
     contactSubtitle:
       'Send a message with your requirements and timeline — I’ll reply with a clear quote and next steps.',
-    email: 'villaramastan@gmail.com ',
+  email: [
+  'villaramastan@gmail.com',
+  'gimenodaryll@gmail.com',
+],
     socials: [
       { label: 'GitHub', url: 'https://github.com/your-handle', icon: Code2 },
       {

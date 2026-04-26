@@ -10,62 +10,81 @@ export function Closing() {
     <section id="contact" className="scroll-mt-24 py-16 sm:py-20">
       <Container>
         <Reveal>
-          <div className="mb-10 space-y-3">
+          <div className="mb-12 space-y-4 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fg/60">
-              Closing
+              Contact
             </p>
-            <h2 className="text-balance text-2xl font-semibold tracking-tight text-fg sm:text-3xl">
+
+            <h2 className="text-3xl font-semibold tracking-tight text-fg">
               {portfolio.closing.contactTitle}
             </h2>
-            <p className="max-w-2xl text-pretty text-sm leading-6 text-fg/70 sm:text-base">
+
+            <p className="mx-auto max-w-2xl text-sm text-fg/70 sm:text-base">
               {portfolio.closing.contactSubtitle}
             </p>
           </div>
         </Reveal>
 
-        <div className="grid gap-4 lg:grid-cols-12">
+        <div className="grid gap-6 lg:grid-cols-12">
+          {/* LEFT CARD */}
           <Reveal>
-            <Card className="lg:col-span-7">
-              <p className="text-sm font-semibold text-fg">
+            <Card className="lg:col-span-7 space-y-5">
+              <p className="text-sm font-semibold text-fg/90">
                 {portfolio.closing.tagline}
               </p>
-              <p className="mt-3 text-sm leading-6 text-fg/70">
-                Email me your requirements (features, timeline, and budget range)
-                and I’ll reply with a clear quote.
+
+              <p className="text-sm leading-6 text-fg/70">
+                Email me your requirements (features, timeline, and budget
+                range), and I’ll reply with a clear quote.
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-3">
-                <a href={`mailto:${portfolio.closing.email}`}>
-                  <Button>
-                    <Mail className="h-4 w-4" />
-                    Email me
-                  </Button>
-                </a>
-                <p className="self-center text-sm text-fg/70">
-                  {portfolio.closing.email}
-                </p>
+              {/* EMAIL BUTTONS */}
+              <div className="space-y-3">
+                {portfolio.closing.email.map((email) => (
+                  <div
+                    key={email}
+                    className="flex items-center justify-between gap-3 rounded-xl border border-border/70 px-4 py-3"
+                  >
+                    <span className="text-sm text-fg/80">{email}</span>
+
+                    <a href={`mailto:${email}`}>
+                      <Button size="sm">
+                        <Mail className="h-4 w-4" />
+                        Email
+                      </Button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </Card>
           </Reveal>
+
+          {/* RIGHT CARD */}
           <Reveal delay={0.05}>
             <Card className="lg:col-span-5">
               <p className="text-sm font-semibold text-fg">Social links</p>
-              <div className="mt-4 grid gap-2">
-                {portfolio.closing.socials.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-between rounded-xl border border-border/70 bg-bg/30 px-4 py-3 text-sm font-semibold text-fg/80 transition hover:border-brand-500/40 hover:bg-bg/50 hover:text-fg"
-                  >
-                    <span className="inline-flex items-center gap-2">
-                      <s.icon className="h-4 w-4 text-brand-500" />
-                      {s.label}
-                    </span>
-                    <span className="text-xs text-fg/50">Open</span>
-                  </a>
-                ))}
+
+              <div className="mt-4 space-y-2">
+                {portfolio.closing.socials.map((s) => {
+                  const Icon = s.icon
+
+                  return (
+                    <a
+                      key={s.label}
+                      href={s.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-between rounded-xl border border-border/70 bg-bg/30 px-4 py-3 text-sm font-semibold text-fg/80 transition hover:border-brand-500/40 hover:bg-bg/50 hover:text-fg"
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <Icon className="h-4 w-4 text-brand-500" />
+                        {s.label}
+                      </span>
+
+                      <span className="text-xs text-fg/50">Open</span>
+                    </a>
+                  )
+                })}
               </div>
             </Card>
           </Reveal>
@@ -74,4 +93,3 @@ export function Closing() {
     </section>
   )
 }
-
