@@ -27,8 +27,8 @@ export function Closing() {
 
         <div className="grid gap-6 lg:grid-cols-12">
           {/* LEFT CARD */}
-          <Reveal>
-            <Card className="lg:col-span-7 space-y-5">
+          <Reveal className="lg:col-span-7">
+            <Card className="space-y-5">
               <p className="text-sm font-semibold text-fg/90">
                 {portfolio.closing.tagline}
               </p>
@@ -60,8 +60,8 @@ export function Closing() {
           </Reveal>
 
           {/* RIGHT CARD */}
-          <Reveal delay={0.05}>
-            <Card className="lg:col-span-5">
+          <Reveal delay={0.05} className="lg:col-span-5">
+            <Card>
               <p className="text-sm font-semibold text-fg">Social links</p>
 
               <div className="mt-4 space-y-2">
