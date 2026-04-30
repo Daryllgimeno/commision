@@ -4,11 +4,13 @@ import { motion, useReducedMotion } from 'framer-motion'
 export function Reveal({
   children,
   delay = 0,
-}: PropsWithChildren<{ delay?: number }>) {
+  className = '',
+}: PropsWithChildren<{ delay?: number; className?: string }>) {
   const reduce = useReducedMotion()
 
   return (
     <motion.div
+      className={className}
       initial={reduce ? false : { opacity: 0, y: 16 }}
       whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}

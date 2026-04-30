@@ -10,6 +10,7 @@ import {
   Rocket,
   Server,
   Wrench,
+  Truck,
 } from 'lucide-react'
 
 export type NavItem = { label: string; href: string }
@@ -41,7 +42,7 @@ export type SocialLink = {
 
 export const portfolio = {
   brand: {
-    name: 'Commission Dev',
+    name: 'Stan & Daryll Web Development Commission Portfolio',
   },
   nav: [
     { label: 'Services', href: '#services' },
@@ -114,6 +115,11 @@ export const portfolio = {
       description: 'Sensor-based automation with configurable thresholds.',
       icon: Cpu,
     },
+    {
+      title: 'Logistic Management System',
+      description: 'Inventory, orders, shipments, and tracking. we can integrate Shopee, Lazada, and other e-commerce platforms.',
+      icon: Truck,    
+    },
   ] satisfies ReadySystem[],
 
   techStack: [
@@ -136,12 +142,12 @@ export const portfolio = {
     {
       title: 'Database',
       icon: Database,
-      items: ['MySQL', 'PostgreSQL', 'Firebase'],
+      items: ['MySQL', 'PostgreSQL', 'Firebase', 'SQLite', 'MariaDB'],
     },
     {
       title: 'Frontend',
       icon: Globe,
-      items: ['React', 'HTML', 'CSS', 'JavaScript'],
+      items: ['React', 'HTML', 'CSS', 'JavaScript', 'Vue.js'],
     },
     {
       title: 'Tools & Technologies',
@@ -160,7 +166,7 @@ export const portfolio = {
     {
       title: 'Deployment / Hosting',
       icon: Server,
-      items: ['Hostinger', 'Vercel', 'Pusher'],
+      items: ['Hostinger', 'Vercel', 'Pusher', 'etc.'],
     },
   ] satisfies TechCategory[],
 
