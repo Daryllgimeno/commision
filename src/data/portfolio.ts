@@ -3,7 +3,7 @@ import {
   BriefcaseBusiness,
   Building2,
   Code2,
-  Cpu,
+  // Cpu,
   Database,
   Globe,
   Layers3,
