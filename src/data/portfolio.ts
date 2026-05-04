@@ -174,15 +174,15 @@ export const portfolio = {
   'gimenodaryll@gmail.com',
 ],
     socials: [
-      { label: 'GitHub', url: 'https://github.com/your-handle', icon: Code2 },
+      { label: 'GitHub', url: 'https://github.com/Daryllgimeno', icon: Code2 },
       {
         label: 'LinkedIn',
-        url: 'https://linkedin.com/in/your-handle',
+        url: '#',
         icon: BriefcaseBusiness,
       },
       {
         label: 'Facebook',
-        url: 'https://facebook.com/your-handle',
+        url: '#',
         icon: BriefcaseBusiness,
       },
     ] satisfies SocialLink[],
