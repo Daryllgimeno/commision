@@ -1,19 +1,28 @@
 import type { ButtonHTMLAttributes, PropsWithChildren } from 'react'
 
 type Variant = 'primary' | 'secondary' | 'ghost'
+type Size = 'sm' | 'md' | 'lg'
 
 export function Button({
   children,
   className = '',
   variant = 'primary',
+  size = 'md',
   ...props
 }: PropsWithChildren<
   ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: Variant
+    size?: Size
   }
 >) {
   const base =
-    'inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:pointer-events-none disabled:opacity-60'
+    'inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:pointer-events-none disabled:opacity-60'
+
+  const sizes: Record<Size, string> = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-sm',
+    lg: 'px-5 py-2.5 text-base',
+  }
 
   const variants: Record<Variant, string> = {
     primary:
@@ -24,7 +33,10 @@ export function Button({
   }
 
   return (
-    <button className={`${base} ${variants[variant]} ${className}`} {...props}>
+    <button
+      className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
+      {...props}
+    >
       {children}
     </button>
   )
