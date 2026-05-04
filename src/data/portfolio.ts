@@ -110,11 +110,11 @@ export const portfolio = {
       description: 'Menu, ordering flow, and lightweight admin controls.',
       icon: Layers3,
     },
-    {
-      title: 'Automated Plant Watering System (Arduino Uno)',
-      description: 'Sensor-based automation with configurable thresholds.',
-      icon: Cpu,
-    },
+    // {
+    //   title: 'Automated Plant Watering System (Arduino Uno)',
+    //   description: 'Sensor-based automation with configurable thresholds.',
+    //   icon: Cpu,
+    // },
     {
       title: 'Logistic Management System',
       description: 'Inventory, orders, shipments, and tracking. we can integrate Shopee, Lazada, and other e-commerce platforms.',
